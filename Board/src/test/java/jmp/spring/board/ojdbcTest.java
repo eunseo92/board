@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.zaxxer.hikari.HikariDataSource;
 
 import jmp.spring.mapper.BoardMapper;
+import jmp.spring.service.BoardService;
 import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j;
 
@@ -23,7 +24,9 @@ import lombok.extern.log4j.Log4j;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 public class ojdbcTest {
-	
+		
+		@Autowired
+		BoardService service;
 	
 		@Autowired
 		HikariDataSource datasource;
@@ -31,11 +34,18 @@ public class ojdbcTest {
 		@Autowired
 		BoardMapper mapper;
 		
+		public void service() {
+			log.info("service===========" + service.getList());
+		}
+		
+		
+		
 		@Test
 		public void mapper() {
-			mapper.getTime();
-			System.out.println("=========" + mapper.getTime());
-			System.out.println("=========" + mapper.getTime());
+			log.info("=========" + mapper.getList());
+			//mapper.getTime();
+			//System.out.println("=========" + mapper.getTime());
+			//System.out.println("=========" + mapper.getTime());
 			
 		}
 		
