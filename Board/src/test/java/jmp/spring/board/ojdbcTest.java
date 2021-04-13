@@ -52,13 +52,11 @@ public class ojdbcTest {
 			
 		}
 	
-	
-	
 		@Test
 		public void ojdbcTest() {
 			try {
 				Connection conn = DriverManager.getConnection
-						  ("jdbc:oracle:thin:@localhost:1521:xe", "jweb", "4321");
+						  ("jdbc:oracle:thin:@localhost:1521:xe", "spring", "1234");
 					//Log.info(conn);
 				System.out.println(conn);
 			} catch (SQLException e) {
