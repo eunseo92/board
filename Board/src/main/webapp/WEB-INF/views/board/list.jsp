@@ -10,9 +10,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<script type="text/javascript">
+	alert('{$regMsg}');
+</script>
 <h1>게시판</h1>
-
-<table border = 1>
+${resMsg}
+<table border = 1 >
 	<c:forEach items="${list }" var="list">
 	<tr>
 		<td>${list.bno }</td>
@@ -21,4 +24,4 @@
 		<td><c:out value="${list.regdate }"/></td>
 	</tr>
 	</c:forEach>
-</table>
+</table> 
