@@ -12,17 +12,27 @@
 
 	<!-- 리스트 목록 조회 -->
 	<select id="getList" resultType="jmp.spring.vo.BoardVo">
-		select * from tbl_board
+		select * from tbl
 	</select>
 	
 	<insert id="insertBoard">
 	
 		<selectKey keyProperty="bno" order="BEFORE" resultType="int">
-			select SEQ_TBL_BOARD.nextval from dual
+			select SEQ_TBL.nextval from dual
 		</selectKey>
 		
-		insert into tbl_board (bno, title, content, writer, regdate)
+		insert into tbl (bno, title, content, writer, regdate)
 			values (#{bno}, #{title}, #{content}, #{writer}, sysdate)
 	</insert>
+	
+	<select id="get" resultType="jmp.spring.vo.BoardVo">
+		select * from tbl where bno=#{bno}
+	</select>
+	
+	<update id="update">
+		update tbl
+		set title=#{}, content=#{}, writer=#{},updatedate=sysdate
+		where bno=#{}
+	</update>
 	
 </mapper>

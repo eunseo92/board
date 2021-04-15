@@ -16,4 +16,11 @@ public interface BoardMapper {
 	public List<BoardVo> getList();
 	
 	public int insertBoard(BoardVo vo); 
+	
+	public BoardVo get(int bno);
+	
+	//update, insert, delete = int
+	public int update(BoardVo vo);
+	
+	
 }

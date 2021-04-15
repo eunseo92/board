@@ -8,10 +8,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+if('${resMsg}' != ''){
+	alert('${resMsg}');
+}
+
+</script>
 </head>
 <body>
 <h1>게시판</h1>
-${resMsg}
+
 <table border = 1>
 	<c:forEach items="${list }" var="list">
 	<tr>

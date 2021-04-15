@@ -12,16 +12,16 @@
 </head>
 <body>
 <h1>게시판</h1>
-<form method="post" action="/board/register">
+<form method="post" action="/board/get">
 
 	<table border = 1>
 		
 		<tr>
-			<td>제목</td><td><input type=text name=title></td></tr>
+			<td>제목</td><td>${vo.title }</td></tr>
 		<tr>	
-			<td>내용</td><td><textarea name=content></textarea></td></tr>
+			<td>내용</td><td>${vo.content }</td></tr>
 		<tr>	
-			<td>작성자</td><td><input type=text name=writer></td></tr>
+			<td>작성자</td><td>${vo.writer }</td></tr>
 		
 		
 	</table>
