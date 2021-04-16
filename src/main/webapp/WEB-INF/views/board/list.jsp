@@ -9,11 +9,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-if('${resMsg}' != ''){
-	alert('${resMsg}');
-}
-
+	if('${resMsg}' != ''){
+		alert('${resMsg}');
+	}
 </script>
+
 </head>
 <body>
 <h1>게시판</h1>
@@ -22,27 +22,15 @@ if('${resMsg}' != ''){
 	<c:forEach items="${list }" var="list">
 	<tr>
 		<td>${list.bno }</td>
-		<td><c:out value="${list.title }"/></td>
+		<td>
+		<a href="/board/get?bno=${list.bno}"><c:out value="${list.title }"/></a>
+		</td>
+		<td><c:out value="${list.content }"/></td>
 		<td><c:out value="${list.writer }"/></td>
 		<td><c:out value="${list.regdate }"/></td>
 	</tr>
 	</c:forEach>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

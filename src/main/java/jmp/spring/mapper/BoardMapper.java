@@ -22,5 +22,6 @@ public interface BoardMapper {
 	//update, insert, delete = int
 	public int update(BoardVo vo);
 	
+	public int delete(int bno);
 	
 }

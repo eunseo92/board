@@ -15,17 +15,13 @@
 <form method="post" action="/board/register">
 
 	<table border = 1>
-		
 		<tr>
 			<td>제목</td><td><input type=text name=title></td></tr>
 		<tr>	
 			<td>내용</td><td><textarea name=content></textarea></td></tr>
 		<tr>	
 			<td>작성자</td><td><input type=text name=writer></td></tr>
-		
-		
 	</table>
-
 	<input type=submit >
 </form>
 

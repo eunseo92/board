@@ -32,9 +32,9 @@ public class ojdbcTest {
 	
 	/**
 	 * 
-	 * 작성자 : 
-	 * 작성일 : 
-	 * 반환값 : 
+	 * �옉�꽦�옄 : 
+	 * �옉�꽦�씪 : 
+	 * 諛섑솚媛� : 
 	 * 
 	 */
 	@Test
@@ -64,7 +64,7 @@ public class ojdbcTest {
 	public void ojdbcTest() {
 		try {
 			Connection conn = DriverManager.getConnection
-					  ("jdbc:oracle:thin:@localhost:1521:xe", "spring", "spring");
+					  ("jdbc:oracle:thin:@localhost:1521:xe", "jweb", "4321");
 			log.info(conn);
 			
 		} catch (SQLException e) {

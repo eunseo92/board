@@ -28,11 +28,13 @@
 	<select id="get" resultType="jmp.spring.vo.BoardVo">
 		select * from tbl where bno=#{bno}
 	</select>
-	
 	<update id="update">
-		update tbl
-		set title=#{}, content=#{}, writer=#{},updatedate=sysdate
-		where bno=#{}
+	 	update tbl 
+	 	set title=#{title}, content=#{content}, writer=#{writer}, updatedate=sysdate
+	 	where bno=#{bno} 
 	</update>
 	
+	<delete id ="delete">
+		delete from tbl where bno=#{bno}
+	</delete>
 </mapper>
